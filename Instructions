@@ -1,0 +1,26 @@
+Instructions to set up environment to run this experiment:
+----------------------------------------------------------
+
+1) Navigate to “gym/envs/classic_control”, replace the existing “cartpole.py” with the
+file with same name from the files attached.
+2) Navigate to “gym/envs”, replace “_init_.py” with the file with same name from the
+files attached.
+3) Change the values of max_episode_steps and reward_threshold to the number of timesteps
+that you want to test for in the lines 56 & 57 of the “_init_.py” file.(eg:
+max_episode_steps = 60000)
+4) Install “Keras” library by using the command “sudo pip install keras” from command
+line.
+Instructions to run python code for different cases of noise settings:
+1)To add the random seed, enter the seed value in line 15 of “cartpolePlayer.py”
+2)For no noise case, run the code by executing the command “python3 ./cartpolePlayer”
+using command line after navigating to folder where project is located.
+3) For Uniform 5% actuator, uncomment the lines 61 & 64 and run the program using the
+command from the previous step.
+4) Similarly, uncomment the lines according to the cases as follows and run the program
+by using the command mentioned above:
+Uniform 10% actuator – 61 & 64 and replace 0.05 with 0.1 in line 61
+Uniform 5% sensor – 126 & 127
+Uniform 10% sensor – 126 & 127 and replace 0.05 with 0.1 in line 126
+Gaussian σ2 = 0.1 sensor – 121 & 128
+Gaussian σ2 = 0.2 sensor - 121 & 128 and change the value of variance to 0.2 in line
+121
